@@ -1,0 +1,152 @@
+{
+  "include": ["./main/src/**/*"],
+  "compilerOptions": {
+    // Type Checking, 类型检查
+    "allowUnreachableCode": false, // 允许无法访问的代码
+    "allowUnusedLabels": false, // 允许未使用的标签
+    // "alwaysStrict": true, // 强制严格模式。 已在 "strict" 属性中包含
+    // "noImplicitAny": true, // 不允许隐含的 any 类型。 已在 "strict" 属性中包含
+    "noImplicitOverride": true, // 没有隐含的继承重载
+    "noImplicitReturns": true, // 没有隐含的返回
+    // "noImplicitThis": true, // 没有隐含的 this 。已在 "strict" 属性中包含
+    "noFallthroughCasesInSwitch": true, // 没有 switch 中的 fallthrough
+    "noUnusedLocals": true, // 没有未使用的局部变量
+    "noUnusedParameters": true, // 没有未使用的函数参数
+    "strict": true, // 严格模式
+    // "strictBindCallApply": true, // 严格 bind、call 和 apply。 已在 "strict" 属性中包含
+    // "strictFunctionTypes": true, // 严格函数类型。 已在 "strict" 属性中包含
+    // "strictNullChecks": true, // 严格 null 检查。 已在 "strict" 属性中包含
+    // "strictPropertyInitialization": true, // 严格属性初始化。 已在 "strict" 属性中包含
+    // "useUnknownInCatchVariables": true, // 严格 catch 变量。 已在 "strict" 属性中包含
+
+    // Modules 模块
+    "allowArbitraryExtensions": true, // 允许任意文件扩展名
+    // "allowImportingTsExtensions": true, // 允许导入 .ts 文件。此标志仅在启用 --noEmit 或 --emitDeclarationOnly 时才允许
+    "allowUmdGlobalAccess": true, // 允许 UMD 全局访问
+    // "baseUrl": "./", // 设置 base url。此功能旨在与浏览器中的AMD模块加载器结合使用，不建议在任何其他环境中使用。
+    "customConditions": [], // 自定义条件。 任何时候在 package.json 中引用 exports 或 imports 字段，TypeScript都会考虑名为 my-condition 的条件。
+    "module": "ESNext", // 模块系统
+    "moduleResolution": "bundler", // 模块解析
+    // "moduleSuffixes": [".mjs", ".cjs", ".js", ".json"], // 模块文件后缀
+    // "noResolve": true, // 不检查 import 和 <reference 指令
+    "paths": {
+      "@main/*": ["./main/src/*"] // 设置路径别名
+    },
+    "resolveJsonModule": true, // 允许导入 json 文件
+    // "resolvePackageJsonExports": true, // 允许导入 package.json 中的 exports 字段。已在 "moduleResolution": "nodenext" 属性中包含。
+    // "resolvePackageJsonImports": true,  // 允许导入 package.json 中的 imports 字段。已在 "moduleResolution": "nodenext" 属性中包含。
+    // "rootDir": "./", // 所有非声明输入文件的最长公共路径。如果设置了 composite ，则默认为包含 tsconfig.json 文件的目录。
+    // "rootDirs": [], // 设置多个根目录。 通知编译器有许多“虚拟”目录作为一个根目录
+    // "typeRoots": [], // 设置类型引用路径。
+    "types": ["vite/client"], // 设置类型引用。
+
+    // Emit 输出
+    "declaration": true, // 生成声明文件。已在 "composite" 属性中包含
+    // "declarationDir": "", // 生成声明文件的目录。
+    "declarationMap": true, // 生成声明文件的映射文件。
+    "downlevelIteration": true, // 生成旧版本的JS。更多关注 importHelpers 和 tslib。
+    // "emitBOM": true, // 生成 BOM。
+    // "emitDeclarationOnly": true,  // 只生成声明文件。
+    "importHelpers": true, // 使用导入帮助程序。如果 importHelpers 标志为on，则这些辅助函数将从tslib模块导入。您需要确保 tslib 模块能够在运行时导入。这只影响模块;全局脚本文件不会尝试导入模块。
+    // "importsNotUsedAsValues": "remove", // 未使用的导入。
+    // "inlineSourceMap": true, // 生成内联 source map。与 sourceMap 互斥。
+    // "inlineSources": true, // 生成内联源。需要设置 sourceMap 或 inlineSourceMap 。
+    // "mapRoot": "", // 指定调试器应定位映射文件的位置而不是生成的位置。
+    // "newLine": "crlf", // 指定发送文件时使用的行尾序列：'CRLF'（dos）或'LF'（unix）。
+    // "noEmit": true, // 不生成代码。这为Babel或swc等其他工具腾出了空间。
+    // "noEmitHelpers": true, // 不生成 helper 函数。您可以在全局范围内为您使用的helper提供实现，并完全关闭helper函数的发出，而不是使用 importHelpers 导入helper。
+    "noEmitOnError": true, // 如果在编译期间遇到错误，就不生成任何输出。
+    // "outDir": "./dist", // 设置输出目录。
+    // "outFile": "./main/dist/main.js", // 设置输出文件。除非 module 是 None 、 System 或 AMD ，否则不能使用 outFile 。
+    // "preserveConstEnums": true, //  保留常量枚举。会增加输出代码大小。已在 "isolatedModules" 属性中包含
+    // "preserveValueImports": true, // 保留值导入。
+    // "removeComments": true, // 不生成注释。
+    // "sourceMap": true, // 生成 source map。
+    // "sourceRoot": "", // 指定调试器应定位源文件的位置而不是生成的位置。
+    // "stripInternal": true, // 从输出中删除内部声明。不要为JSDoc注释中有 @internal 注释的代码发出声明。
+
+    // JavaScript Support JS支持
+    "allowJs": true, //  允许在项目中导入JavaScript文件。
+    "checkJs": true, // 与 allowJs 协同工作。当启用 checkJs 时，则在JavaScript文件中报告错误。这相当于在项目中包含的所有JavaScript文件的顶部包含 // @ts-check 。
+    // "maxNodeModuleJsDepth": 0, // 在 node_modules 下搜索和加载JavaScript文件的最大依赖深度。
+
+    // Editor Support 编辑器支持
+    // "disableSizeLimit": true, // 禁用大小限制。为了避免在处理非常大的JavaScript项目时可能出现的内存膨胀问题，TypeScript将分配的内存量有上限。
+    // "plugins": [], // 插件。
+
+    // Interop Constraints 互操作约束
+    "allowSyntheticDefaultImports": true, // 允许合成default导入。已在 "esModuleInterop" 属性中包含
+    "esModuleInterop": true, // 允许从 CommonJS 模块导入默认值。已在 "module": "nodenext" 属性中包含。
+    "forceConsistentCasingInFileNames": true, // 强制文件名的大小写。
+    "isolatedModules": true, // 生成独立的模块。
+    // "preserveSymlinks": true, // 保留符号链接。
+    // "verbatimModuleSyntax": true, // 保留模块语法。
+
+    // Backwards Compatibility 向后兼容性
+    // "charset": "utf8", // 设置字符集。
+    // "keyofStringsOnly": true, // 仅在字符串上使用 keyof。
+    // "noImplicitUseStrict": true, // 不隐式使用严格模式。
+    // "noStrictGenericChecks": true, // 不隐式检查泛型参数。
+    // "out": "./main/dist/main.js", // 设置输出文件。
+    // "suppressExcessPropertyErrors": true, // 不检查额外的属性。
+    // "suppressImplicitAnyIndexErrors": true, // 不检查索引访问的隐式任何类型。
+
+    // Language and Environment 语言和环境
+    // "emitDecoratorMetadata": true, // 生成装饰器元数据。 必须设置 emitDecoratorMetadata 为 true。
+    // "experimentalDecorators": true, // 允许实验性装饰器。
+    // "jsx": "preserve", // 保留 JSX。 这只影响从 .tsx 文件开始的JS文件的输出。
+    // "jsxFactory": "React.createElement", // 设置 JSX 生成工厂。
+    // "jsxFragmentFactory": "React.Fragment", // 设置 JSX Fragment 生成工厂。
+    // "jsxImportSource": "react", // JSX导入源
+    "lib": ["ESNext", "DOM"], // 设置要包含在编译中的库。
+    // "moduleDetection": "auto", // 设置模块检测。
+    // "noLib": true, // 禁止自动包含任何库文件。
+    // "reactNamespace": "React", // 设置 React 命名空间。
+    "target": "ES6",
+    // "useDefineForClassFields": true, // 生成定义Class字段。如果 target 为 ES2022 或更高，则为 true
+
+    // Compiler Diagnostics 编译器诊断
+    // "diagnostics": false, // 禁用诊断。 已弃用
+    // "explainFiles": true, // 为每个文件显示诊断。
+    // "extendedDiagnostics": true, // 使用此标志来发现TypeScript在编译时花费的时间。
+    // "generateCpuProfile": "profile.cpuprofile", // 在编译器运行期间让TypeScript发出v8 CPU配置文件。CPU配置文件可以让您深入了解构建可能会很慢的原因。
+    // "listEmittedFiles": true, // 将编译部分生成的文件名打印到终端。
+    // "listFiles": true,  // 打印编译部分的文件名。
+    // "traceResolution": true, // 在编译期间打印文件的解析路径。
+
+    // Projects 项目
+    "composite": true,
+    // "disableReferencedProjectLoad": true, // 禁用引用项目的加载。如果你的项目很大，你可以使用标记 disableReferencedProjectLoad 来禁用所有项目的自动加载。相反，项目是在您通过编辑器打开文件时动态加载的。
+    // "disableSolutionSearching": true, // 禁用解决方案搜索。
+    // "disableSourceOfProjectReferenceRedirect": true, // 禁用项目引用重定向。
+    // "incremental": true, // 生成增量编译。true 如果 composite
+    // "tsBuildInfoFile": ".tsbuildinfo", // 指定用于存储增量编译信息的文件。
+
+    // Output Formatting 输出格式化
+    // "noErrorTruncation": true, // 不截断错误消息。
+    // "preserveWatchOutput": true, // 是否在监视模式下保留过时的控制台输出，而不是在每次发生更改时清除屏幕。
+    "pretty": true, // 使用颜色和上下文样式化错误和消息。
+
+    // Completeness 完整性
+    // "skipDefaultLibCheck": true, // 忽略默认库的类型检查。使用 skipLibCheck 代替。
+    // "skipLibCheck": true, // 忽略库的类型检查。
+
+    // Watch Options 侦听选项
+    "assumeChangesOnlyAffectDirectDependencies": true // 只在直接依赖项上应用类型更改。
+  },
+  "watchOptions": {
+    // "watchFile": "useFsEvents", // 尝试使用操作系统/文件系统的本地事件进行文件更改。
+    // "watchDirectory": "useFsEvents", // 尝试使用操作系统/文件系统的本地事件进行目录更改。
+    // "fallbackPolling": "dynamicpriority", // 指定在系统耗尽本机文件监视器和/或不支持本机文件监视器时使用的轮询策略。
+    // "synchronousWatchDirectory": true, // 在不支持递归监视的平台上同步调用回调并更新目录监视器的状态。
+    // "excludeDirectories": [], // 排除目录。
+    // "excludeFiles": [], // 排除文件。
+  },
+
+  "typeAcquisition": {
+    // "enable": true, // 启用类型推断。
+    // "include": [], // 包含的类型。
+    // "exclude": [], // 排除的类型。
+    // "disableFilenameBasedTypeAcquisition": true, // 禁用基于文件名的类型推断。
+  }
+}

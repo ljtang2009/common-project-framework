@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    // Modules 模块
+    "module": "esnext", // 模块系统
+    "moduleResolution": "bundler", // 模块解析
+    "allowImportingTsExtensions": true, // 允许TypeScript文件使用TypeScript特定的扩展名（如.ts、.mts或.tsx）相互导入
+
+    // Language and Environment 语言和环境
+    "target": "esnext",
+
+    // Emit 输出
+    "emitDeclarationOnly": true,
+
+    // Projects
+    "composite": true
+  },
+  "include": ["vite.config.ts"]
+}

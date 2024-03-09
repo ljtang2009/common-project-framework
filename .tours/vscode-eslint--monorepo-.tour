@@ -1,0 +1,21 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "vscode eslint 插件在 Monorepo 项目中配置",
+  "steps": [
+    {
+      "file": ".vscode/settings.json",
+      "description": "配置 \"eslint.experimental.useFlatConfig\": true 使得 vscode 自动查找新版的 eslint 配置文件。",
+      "line": 6
+    },
+    {
+      "file": ".vscode/settings.json",
+      "description": "配置 eslint.workingDirectories，使得 vscode 到指定目录中查找 eslint配置文件。适合 monorep 项目。",
+      "line": 7
+    },
+    {
+      "file": ".vscode/settings.json",
+      "description": "配置\n  \"editor.formatOnSave\": false,\n  \"editor.codeActionsOnSave\": {\n    \"source.fixAll.eslint\": \"explicit\"\n  }\n使得 vscode 保存的时候，使用 eslint 检查代码。",
+      "line": 2
+    }
+  ]
+}

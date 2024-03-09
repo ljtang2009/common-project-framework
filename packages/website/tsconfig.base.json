@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    // Type Checking, 类型检查
+    "allowUnreachableCode": false, // 允许无法访问的代码
+    "allowUnusedLabels": false, // 允许未使用的标签
+    "noImplicitOverride": true, // 没有隐含的继承重载
+    "noImplicitReturns": true, // 没有隐含的返回
+    "noFallthroughCasesInSwitch": true, // 没有 switch 中的 fallthrough
+    "noUnusedLocals": true, // 没有未使用的局部变量
+    "noUnusedParameters": true, // 没有未使用的函数参数
+    "strict": true, // 严格模式
+
+    // Modules 模块
+    "allowArbitraryExtensions": true, // 允许任意文件扩展名
+    // "allowImportingTsExtensions": true, // 允许TypeScript文件使用TypeScript特定的扩展名（如.ts、.mts或.tsx）相互导入
+    "allowUmdGlobalAccess": true, // 允许 UMD 全局访问
+    "resolveJsonModule": true, // 允许导入带有 .json 扩展名的模块
+
+    // Emit 输出
+    "declaration": true, // 生成声明文件。已在 "composite" 属性中包含
+    "declarationMap": true, // 生成声明文件的映射文件。
+    "downlevelIteration": true, // 生成旧版本的JS。更多关注 importHelpers 和 tslib。
+    "importHelpers": true, // 使用导入帮助程序。如果 importHelpers 标志为on，则这些辅助函数将从tslib模块导入。您需要确保 tslib 模块能够在运行时导入。这只影响模块;全局脚本文件不会尝试导入模块。
+    "noEmitOnError": true, // 如果在编译期间遇到错误，就不生成任何输出。
+    "sourceMap": true, // 生成 source map。
+
+    // JavaScript Support JS支持
+    "jsx": "preserve",
+    "allowJs": true, //  允许在项目中导入JavaScript文件。
+    "checkJs": true, // 与 allowJs 协同工作。当启用 checkJs 时，则在JavaScript文件中报告错误。这相当于在项目中包含的所有JavaScript文件的顶部包含 // @ts-check 。
+
+    // Interop Constraints 互操作约束
+    "allowSyntheticDefaultImports": true, // 允许合成default导入。已在 "esModuleInterop" 属性中包含
+    "esModuleInterop": true, // 允许从 CommonJS 模块导入默认值。已在 "module": "nodenext" 属性中包含。
+    "forceConsistentCasingInFileNames": true, // 强制文件名的大小写。
+    "isolatedModules": true, // 生成独立的模块。
+
+    // Output Formatting 输出格式化
+    "pretty": true // 使用颜色和上下文样式化错误和消息。
+  }
+}

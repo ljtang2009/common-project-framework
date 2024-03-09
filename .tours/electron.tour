@@ -1,0 +1,11 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "安装electron依赖",
+  "steps": [
+    {
+      "file": "packages/desktop/package.json",
+      "description": "在package.json中设置electron版本。\n参考:https://www.electronjs.org/zh/docs/latest/tutorial/installation#%E7%BC%93%E5%AD%98\n找到本地缓存目录。\n打开 https://github.com/electron/electron/releases，找到对应版本 zip 包和 SHASUMS256.txt。下载到缓存目录中, 以[checksum]/[filename]格式存储。\n",
+      "line": 21
+    }
+  ]
+}

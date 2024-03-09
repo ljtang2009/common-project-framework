@@ -1,0 +1,24 @@
+{
+  "name": "desktop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "start": "electron main/dist/main.js",
+    "dev:main": "vite build --config vite.main.config.mts --watch",
+    "build:main": "vite build --config vite.main.config.mts",
+    "tsc:check": "tsc --noEmit --watch"
+  },
+  "keywords": [],
+  "author": "Tang Lijin <ho_ho_gl@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "only-allow": "^1.2.1"
+  },
+  "dependencies": {
+    "electron": "28.2.2",
+    "vite": "^5.1.1"
+  }
+}

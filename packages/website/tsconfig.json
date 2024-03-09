@@ -1,0 +1,26 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    // Modules 模块
+    "allowImportingTsExtensions": true, // 允许TypeScript文件使用TypeScript特定的扩展名（如.ts、.mts或.tsx）相互导入
+    "baseUrl": "./", // 设置 base url。此功能旨在与浏览器中的AMD模块加载器结合使用，不建议在任何其他环境中使用。
+    "module": "esnext", // 模块系统
+    "moduleResolution": "bundler", // 模块解析
+    "paths": {
+      "@/*": ["src/*"]
+    }, // 设置路径别名
+
+    // Emit 输出
+    "noEmit": true,
+
+    // Language and Environment 语言和环境
+    "lib": ["esnext", "dom"], // 设置要包含在编译中的库。
+    "target": "esnext",
+    "jsx": "react-jsx", // 控制如何在JavaScript文件中发出JSX构造。这只影响从 .tsx 文件开始的JS文件的输出。
+
+    // Completeness 完整性
+    "skipLibCheck": true // 忽略库的类型检查。
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

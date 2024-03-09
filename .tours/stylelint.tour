@@ -1,0 +1,17 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "stylelint配置",
+  "steps": [
+    {
+      "file": ".vscode/settings.json",
+      "description": "设置vscode保存代码的时候自动fix stylelint",
+      "line": 5
+    },
+    {
+      "file": "packages/lint-config/src/stylelint/order/index.ts",
+      "description": "extends 需要再应用的项目中重新安装\n",
+      "line": 2
+    }
+  ],
+  "ref": "main"
+}

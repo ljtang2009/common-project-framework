@@ -1,7 +1,12 @@
-public/* linguist-vendored
+public/* linguist-vendored # 要对部分文件夹进行不统计, 例如github上统计文件类型占比。
 
 # Automatically normalize line endings (to LF) for all text-based files.
-* text=auto eol=lf
+*.ts    text eol=lf
+*.vue   text eol=lf
+*.tsx   text eol=lf
+*.jsx   text eol=lf
+*.html  text eol=lf
+*.json  text eol=lf
 
 # Declare files that will always have CRLF line endings on checkout.
 *.{cmd,[cC][mM][dD]} text eol=crlf

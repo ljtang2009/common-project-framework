@@ -1,12 +1,11 @@
-# EditorConfig is awesome: https://EditorConfig.org
+# 参考: https://EditorConfig.org
 
-# top-most EditorConfig file
-root = true
+root = true # 应在文件顶部任何部分之外指定的特殊属性。设置为 true 可停止对当前文件的 .editorconfig 文件搜索。
 
-[*]
-indent_style = space
-indent_size = 2
-end_of_line = crlf
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
+[*] # 所有文件
+indent_style = space # 设置为 tab 或 space 分别使用硬制表符或软制表符。
+indent_size = 2 # 一个整数，定义用于每个缩进级别的列数和软选项卡的宽度（如果支持）。
+end_of_line = lf # 设置为 lf、cr 或 crlf 以控制换行符的表示方式。
+charset = utf-8 # 设置为 latin1、utf-8、utf-8-bom、utf-16be 或 utf-16le 来控制字符集。
+trim_trailing_whitespace = true # 设置为 true 以删除换行符之前的任何空白字符，设置为 false 以确保不会删除换行符。
+insert_final_newline = true # 设置为 true 以确保文件在保存时以换行符结尾，设置为 false 以确保文件不以换行符结尾。

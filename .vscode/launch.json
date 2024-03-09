@@ -1,0 +1,43 @@
+{
+  // 使用 IntelliSense 了解相关属性。
+  // 悬停以查看现有属性的描述。
+  // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "vite-plugin",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/packages/website",
+      "runtimeExecutable": "${workspaceFolder}/packages/website/node_modules/.bin/vite",
+      "args": ["--config build/vite.config.ts"]
+    },
+    {
+      "name": "website-compile",
+      "cwd": "${workspaceFolder}/packages/website",
+      "program": "${workspaceFolder}/packages/website/.build-dist/dev.js",
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    },
+    {
+      "name": "website-eslint",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/packages/website",
+      "runtimeExecutable": "${workspaceFolder}/packages/website/node_modules/.bin/eslint",
+      "args": ["."]
+    },
+    {
+      "name": "Electron Main",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/packages/desktop",
+      "runtimeExecutable": "${workspaceFolder}/packages/desktop/node_modules/.bin/electron",
+      "windows": {
+        "runtimeExecutable": "${workspaceFolder}/packages/desktop/node_modules/.bin/electron.cmd"
+      },
+      "args": ["main/dist/main.js"]
+    }
+  ]
+}
