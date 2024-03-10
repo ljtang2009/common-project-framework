@@ -1,4 +1,5 @@
-import { addPluginName } from './ruleTools.ts';
+import { describe, expect, it } from 'vitest';
+import { addPluginName } from './ruleTools.js';
 
 describe('addPluginName', () => {
   it('should add plugin name to rules object', () => {

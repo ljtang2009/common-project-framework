@@ -1,10 +1,5 @@
 import globals from 'globals';
 import lintConfig from '@tanglijin/lint-config';
-// import {
-//   dirname,
-//   resolve as resolvePath,
-// } from 'path';
-// import { fileURLToPath } from 'url';
 import _ from 'lodash';
 import { dirname, join } from 'desm';
 
@@ -51,7 +46,18 @@ export default [
   },
   {
     ..._.merge(_.cloneDeep(baseTSConfig), {
-      files:           ['vite.config.ts'],
+      files:           ['src/**/*.spec.ts'],
+      languageOptions: {
+        parserOptions: {
+          project:         join(import.meta.url, 'tsconfig.test.json'),
+          tsconfigRootDir: __dirname,
+        },
+      },
+    }),
+  },
+  {
+    ..._.merge(_.cloneDeep(baseTSConfig), {
+      files:           ['vite.config.ts', 'jest.config.ts'],
       languageOptions: {
         parserOptions: {
           project:         join(import.meta.url, 'tsconfig.node.json'),

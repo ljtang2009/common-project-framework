@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    // Emit 输出
+    "outDir": "dist"
+  },
+  "include": ["src"],
+  "exclude": ["src/**/*.spec.ts"]
+}
